@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Düzgün Çokgen Çizimi</title>
+    <link rel="stylesheet" href="gorsel.css">
+    <script type="text/javascript" src="komutlar.js"></script>
+</head>
+<body>
+<table>
+    <tr>
+        <td rowspan="12"><canvas id="cizimAlani" width="1000" height="500"></td>
+        <td></td>
+        <td>Kenar Sayısı</td>
+        <td><input type="text" id="kenarSayisi" value="3"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Kenar Uzunluğu</td>
+        <td><input type="text" id="kenarUzunlugu" value="5"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>İçini Doldur</td>
+        <td><input type="checkbox" id="renkDoldur">
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Çevrel Çemberi Göster</td>
+        <td><input type="checkbox" id="cevrelCember"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="button" value="Çokgen Çiz" onclick="grafikCiz(25)"></td>
+        <td><input type="button" value="Resim Al" onclick="resimKaydet()"></td>
+    </tr>
+    <tr>
+        <td></br></td>
+        <td></td>
+        <td></td>       
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="2" align="center">Hesaplanan Değerler</td>
+        <td></td>       
+    </tr>
+    <tr>
+        <td></td>
+        <td>Merkez Açı : </td>
+        <td><div id="textMerkezAci"></div></td>       
+    </tr>
+    <tr>
+        <td></td>
+        <td>Yarıçap : </td>
+        <td><div id="textYariCap"></div></td>       
+    </tr>
+    <tr>
+        <td></td>
+        <td>Yükseklik (h) : </td>
+        <td><div id="textYukseklik"></div></td>       
+    </tr>
+    <tr>
+        <td></td>
+        <td>Alan : </td>
+        <td><div id="textAlan"></div></td>       
+    </tr>
+    <h1>BY finnxes</h1>
+</table>
+</body>
+</html>

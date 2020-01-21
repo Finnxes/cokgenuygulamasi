@@ -1,0 +1,25 @@
+﻿#cizimAlani{
+    color:red;
+    border: 2px solid #88F;
+    background-color: aliceblue;
+}
+/*Kenar uzunluğu ve kenar sayısı girilecek metin kutularını biçimlendir*/
+#kenarSayisi{
+    width: 50px;
+    background-color: lightpink;
+    border: 1px solid red;
+    height: 23px;
+    font-size: 18px;
+}
+#kenarUzunlugu{
+    width: 50px;
+    background-color: lightpink;
+    border: 1px solid red;
+    height: 23px;
+    font-size: 18px;
+}
+/*Tabloyu biçimlendir.*/
+table, th, td
+{
+border: 0px solid red;
+}

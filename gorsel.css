@@ -93,7 +93,7 @@ main {
 }
 
 .results-section {
-    background-color: white;
+    background-color: white; /* Arka plan rengi normal modda beyaz */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -141,4 +141,10 @@ footer p {
 
 .dark-mode .control-group label {
     color: #fff;
+}
+
+/* Karanlık Mod */
+.dark-mode .results-section {
+    background-color: #333; /* Arka plan rengi karanlık modda koyu gri */
+    color: #fff; /* Metin rengi karanlık modda beyaz */
 }

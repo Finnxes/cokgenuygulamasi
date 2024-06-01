@@ -1,25 +1,144 @@
-﻿#cizimAlani{
-    color:red;
+/* Genel stil ayarları */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.canvas-section {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#cizimAlani {
     border: 2px solid #88F;
     background-color: aliceblue;
 }
-/*Kenar uzunluğu ve kenar sayısı girilecek metin kutularını biçimlendir*/
-#kenarSayisi{
-    width: 50px;
-    background-color: lightpink;
-    border: 1px solid red;
-    height: 23px;
-    font-size: 18px;
+
+.controls-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
 }
-#kenarUzunlugu{
-    width: 50px;
-    background-color: lightpink;
-    border: 1px solid red;
-    height: 23px;
-    font-size: 18px;
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
 }
-/*Tabloyu biçimlendir.*/
-table, th, td
-{
-border: 0px solid red;
+
+.control-group label {
+    margin-bottom: 5px;
+}
+
+.control-group input[type="number"],
+.control-group input[type="checkbox"],
+.control-group button {
+    margin-bottom: 10px;
+}
+
+.control-group input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.control-group input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+.control-group button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.control-group button:hover {
+    background-color: #45a049;
+}
+
+.results-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.results-section h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Karanlık Mod */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode input[type="number"],
+.dark-mode input[type="checkbox"],
+.dark-mode button {
+    background-color: #555;
+    border-color: #555;
+    color: #fff;
+}
+
+.dark-mode .canvas-section {
+    background-color: #444;
+}
+
+.dark-mode .control-group label {
+    color: #fff;
 }

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Düzgün çokgen çizim uygulaması">
+    <title>Düzgün Çokgen Çizimi</title>
+    <link rel="stylesheet" href="gorsel.css">
+    <script defer src="komutlar.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Düzgün Çokgen Çizimi</h1>
+            <button id="menuToggle" class="menu-toggle">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="left-panel">
+            <section class="canvas-section">
+                <canvas id="cizimAlani"></canvas>
+            </section>
+            <section class="results-section">
+                <div class="results-card">
+                    <h2>Hesaplanan Değerler</h2>
+                    <div class="result-item">
+                        <span class="material-icons">architecture</span>
+                        <span>Merkez Açı:</span>
+                        <span id="textMerkezAci"></span>°
+                    </div>
+                    <div class="result-item">
+                        <span class="material-icons">radio_button_unchecked</span>
+                        <span>Yarıçap:</span>
+                        <span id="textYariCap"></span>
+                    </div>
+                    <div class="result-item">
+                        <span class="material-icons">height</span>
+                        <span>Yükseklik:</span>
+                        <span id="textYukseklik"></span>
+                    </div>
+                    <div class="result-item">
+                        <span class="material-icons">square_foot</span>
+                        <span>Alan:</span>
+                        <span id="textAlan"></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="controls-section" id="controlsPanel">
+            <div class="controls-wrapper">
+                <div class="control-group">
+                    <label for="kenarSayisi">
+                        <span class="material-icons">polyline</span>
+                        Kenar Sayısı
+                    </label>
+                    <input type="range" id="kenarSayisi" value="3" min="3" max="12" step="1">
+                    <span class="value-display" id="kenarSayisiValue">3</span>
+                </div>
+                <div class="control-group">
+                    <label for="kenarUzunlugu">
+                        <span class="material-icons">straighten</span>
+                        Kenar Uzunluğu
+                    </label>
+                    <input type="range" id="kenarUzunlugu" value="5" min="1" max="20" step="0.5">
+                    <span class="value-display" id="kenarUzunluguValue">5</span>
+                </div>
+                <div class="control-group">
+                    <label for="olcek">
+                        <span class="material-icons">zoom_in</span>
+                        Ölçek
+                    </label>
+                    <input type="range" id="olcek" value="25" min="5" max="100" step="5">
+                    <span class="value-display" id="olcekValue">25</span>
+                </div>
+                <div class="control-group switches">
+                    <label class="switch-container">
+                        <label class="switch">
+                            <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+                            <span class="slider"></span>
+                        </label>
+                        <span class="switch-label">Karanlık Mod</span>
+                    </label>
+                    <label class="switch-container">
+                        <label class="switch">
+                            <input type="checkbox" id="renkDoldur">
+                            <span class="slider"></span>
+                        </label>
+                        <span class="switch-label">İçini Doldur</span>
+                    </label>
+                    <label class="switch-container">
+                        <label class="switch">
+                            <input type="checkbox" id="cevrelCember">
+                            <span class="slider"></span>
+                        </label>
+                        <span class="switch-label">Çevrel Çember</span>
+                    </label>
+                    <label class="switch-container">
+                        <div class="color-picker-wrapper">
+                            <span class="switch-label">Çokgen Rengi</span>
+                            <input type="color" id="cokgenRenk" value="#6699ff">
+                        </div>
+                    </label>
+                    <label class="switch-container">
+                        <label class="switch">
+                            <input type="checkbox" id="izometrikGorunum">
+                            <span class="slider"></span>
+                        </label>
+                        <span class="switch-label">İzometrik Görünüm</span>
+                    </label>
+                </div>
+                <div class="control-group buttons">
+                    <button onclick="grafikCiz(25)" class="primary-btn">
+                        <span class="material-icons">draw</span>
+                        Çokgen Çiz
+                    </button>
+                    <button onclick="resimKaydet()" class="secondary-btn">
+                        <span class="material-icons">download</span>
+                        Resim Al
+                    </button>
+                    <button onclick="animasyonBaslat()" class="secondary-btn">
+                        <span class="material-icons">play_arrow</span>
+                        Döndür
+                    </button>
+                    <button onclick="animasyonDurdur()" class="secondary-btn">
+                        <span class="material-icons">stop</span>
+                        Durdur
+                    </button>
+                    <button onclick="paylas()" class="secondary-btn">
+                        <span class="material-icons">share</span>
+                        Paylaş
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Finnxes</p>
+    </footer>
+</body>
+</html>
